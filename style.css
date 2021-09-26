@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -39,6 +40,7 @@ h3{
     background-color: green;
     text-align: center;
 }
+
 nav{
     position: fixed;
     top: 0;
@@ -48,7 +50,7 @@ nav{
     background-color: deepskyblue;
     z-index: 100;
 }
-ul > li{
+#menu, .submenu, .submenu2{
     list-style: none;
 }
 a {
@@ -70,7 +72,7 @@ a {
     background-color: deepskyblue;
 }
 
-.submenu li a, #menu li:hover .submenu, .submenu li:hover .submenu2 {
+#menu li:hover .submenu, .submenu li:hover .submenu2 {
     display: block;
 }
 
@@ -147,7 +149,44 @@ p {
     top: 0;
     left: 0;
     width: 32%;
-    height: 100%;
+    height: 1000px;
     display: inline-block;
-    border: 2px solid blue;
+}
+#imagenlogros{
+    background-image: url("imagenes/logros.jpg");
+}
+#imagenfortalezas{
+    background-image: url("imagenes/fortalezas.jpg");
+}
+#imagenobjetivos{
+    background-image: url("imagenes/objetivos.jpg");
+}
+.ILFO{
+    position: absolute;
+    top:5%;
+    left: 25%;
+    width: 270px;
+    height: 270px;
+    background-position: center;
+    background-size: cover;
+}
+.TLFO {
+    position: absolute;
+    top: 350px;
+    left: 5%;
+    width: 400px;
+    height: 550px;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+#logros{
+    background-color: lightgoldenrodyellow;
+
+}
+#objetivos{
+    background-color: linen;
+}
+#fortalezas{
+    background-color: bisque;
 }
