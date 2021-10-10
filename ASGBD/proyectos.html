@@ -40,6 +40,54 @@
         <h5>2ºASIR</h5>
     </nav>
 </header>
-<h2 id="GBD">Proyecto de repaso de ASGBD</h2>
+<main id="mainproyectos">
+    <section class="sectionproyectos">
+        <h2 id="#GBD">Proyecto de repaso de ASGBD</h2>
+        <div class="textoproyecto">
+            <h3>Primeros pasos</h3>
+            <p>
+                Un buen diseño de la base de datos es clave para este  trabajo. Quizá ha sido la parte que más me ha costado hacer,
+                pero como ya he dicho es la más importante. Para empezar he leido los datos de las parrillas y he diseñado unas
+                tablas en borrador. Estas tablas han ido cogiendo forma y decidí pasarlas a draw.io para tener un diseño
+                más profesional y más leible.
+                Tras muchas vueltas y algunos cambios de tablas, de restricciones y de claves, este es el diseño:
+            </p>
+            <img class="imagenesgbd" src="../imagenes/esquema.PNG">
+            <p>
+                La creación de las tablas no supuso mucho inconveniente aunque más de una vez edité alguna. Lo más costoso vino con
+                los inserts. En mi tabla capítulos y mi tabla emisiones los inserts eran muchísimos, varias horas de  trabajo mirando
+                datos de las tablas y complementándolo más o menos de forma coherente.
+            </p>
+            <p>
+                Al finalizar los inserts realicé las vistas, en mi caso siempre me gusta hacer select e ir mirando y luego ya crear la vista.
+                Por ejemplo:
+                <code>create view jonathan_lorenzo_vista5 as
+                    select nombre_programa, n_capitulo as numero_capitulo, nombre_capitulo
+                    from capitulos
+                    join programa using (id_programa)
+                    where descripcion like '%TENIS%';</code>
+                Es una vista que nos permite buscar la palabra tenis dentro de todas las descripciones y nos muestra las que contengan
+                dicha palabra.
+            </p>
+            <h3>Dificultades encontradas y Soluciones</h3>
+            <p>
+                La mayor dificultad y la más clara ha sido la realización del diseño correcto que me permitiese meter todos los datos.
+                Me ha costado bastante y he tenido que cambiarlo un par de veces, siempre me fallaba algo o me faltaba algo o no veía
+                suficiente coherencia.
+            </p>
+            <p>
+                También podríamos añadir como cierta dificultad la introducción de datos en tablas que tienen varios IDS y que te obligan
+                a ir mirando constantemente, pero esto en verdad es organización y paciencia.
+            </p>
+            <h3>Conclusión Final</h3>
+            <p>
+                Para mi ha sido un trabajo un poco agotador de bastantes horas, pero dicen que todo trabajo tiene su recompensa y la verdad es que ver la parrilla
+                en mi datagrip me ha hecho sentir bien. Sobretodo sabiendo que todo lo hice yo.
+            </p>
+            <img  class="imagenesgbd" src="../imagenes/parrilla.PNG">
+        </div>
+
+    </section>
+</main>
 </body>
 </html>
